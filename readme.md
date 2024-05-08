@@ -11,4 +11,4 @@
 ## [Пагинация](https://github.com/Nikolay08041979/django_project-2/tree/master/1.2-requests-templates/pagination)
 
 ### Измененя внесены:
-✅ [stations/views.py](https://github.com/Nikolay08041979/django_project-2/blob/master/1.2-requests-templates/recipes/calculator/views.py)
+✅ [stations/views.py](https://github.com/Nikolay08041979/django_project-2/blob/master/1.2-requests-templates/pagination/stations/views.py)
