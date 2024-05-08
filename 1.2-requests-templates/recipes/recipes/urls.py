@@ -19,5 +19,5 @@ from django.urls import path
 from calculator.views import select_recipe
 
 urlpatterns = [
-    path('<str:recipe>', select_recipe, name='index')
+    path('<str:recipe>/<int:servings>/', select_recipe, name='index'),
 ]
