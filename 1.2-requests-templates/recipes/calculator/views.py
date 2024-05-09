@@ -32,12 +32,20 @@ DATA = {
 # }
 
 def select_recipe(request, recipe):
-    qty = request.GET.get('servings', 1)
+    qty = int(request.GET.get('servings', 1))
     menu = {}
     for key, value in DATA.items():
         menu[key] = {}
         for inner_key, inner_value in value.items():
-            menu[key][inner_key] = inner_value * qty
+            menu[key][inner_key] = round((inner_value * qty),1)
 
+    menu_item = {}
     if recipe in menu.keys():
-        return HttpResponse(render(request, f'{recipe}/index.html', context=menu))
+        for key, value in menu[recipe].items():
+            menu_item.setdefault(key, value)
+
+        context = {
+         'recipe': menu_item
+        }
+
+        return HttpResponse(render(request, 'calculator/index.html', context=context))
