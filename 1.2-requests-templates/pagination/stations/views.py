@@ -17,8 +17,8 @@ def bus_stations(request):
         paginator = Paginator(busstations, 10)
         page = paginator.get_page(page_number)
         context = {
-            'bus_stations': paginator,
-            'page': page,
+            'bus_stations': paginator.page(page_number),
+            'page': page
         }
     # получите текущую страницу и передайте ее в контекст
     # также передайте в контекст список станций на странице

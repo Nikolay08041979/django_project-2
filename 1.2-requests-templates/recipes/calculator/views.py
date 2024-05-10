@@ -41,11 +41,11 @@ def select_recipe(request, recipe):
 
     menu_item = {}
     if recipe in menu.keys():
-        for key, value in menu[recipe].items():
-            menu_item.setdefault(key, value)
+        for ingredient, amount in menu[recipe].items():
+            menu_item.setdefault(ingredient, amount)
 
         context = {
-         'recipe': menu_item
+            'recipe': menu_item
         }
 
-        return HttpResponse(render(request, 'calculator/index.html', context=context))
+        return HttpResponse(render(request, 'calculator/index.html', context))
