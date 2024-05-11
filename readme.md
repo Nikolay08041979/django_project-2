@@ -1,4 +1,4 @@
-# Домашнее задание №2
+# Домашнее задание №2 "Обработка запросов и шаблоны"
 
 ## ["Рецепты"](https://github.com/Nikolay08041979/django_project-2/tree/master/1.2-requests-templates/recipes)
 
